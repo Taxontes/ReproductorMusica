@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/fondo_pantalla_degradado"
+    tools:context=".Vistas.MainActivity">
+
+        <TextView
+            android:id="@+id/tituloReproductor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:ellipsize="marquee"
+            android:padding="20dp"
+            android:singleLine="true"
+            android:text="Titulo de la cancion"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+
+                 <ImageView
+                     android:id="@+id/logoAplicacion"
+                 android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/controles"
+                android:src="@drawable/logo_reproductor"
+                android:padding="20dp"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="40dp"
+            android:id="@+id/controles">
+
+                <SeekBar
+                    android:id="@+id/seek_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/white" />
+
+                <TextView
+                    android:id="@+id/tiempoInicial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/seek_bar"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="0:00"
+                    android:textColor="@color/white" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tiempoTotal"
+                    android:layout_below="@+id/seek_bar"
+                    android:text="0:00"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/white"
+                    android:layout_margin="20dp"/>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:layout_below="@+id/menu">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/baseline_skip_previous_24"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:id="@+id/anterior"
+                            />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/baseline_skip_next_24"
+                            android:layout_toRightOf="@id/play_pause"
+                            android:id="@+id/siguiente"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/baseline_thumb_up_24"
+                            android:layout_toRightOf="@id/siguiente"
+                            android:id="@+id/meGusta"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginLeft="15dp"
+                            />
+
+
+
+                        <ImageView
+                            android:id="@+id/play_pause"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/baseline_play_arrow_24" />
+
+                        <ImageView
+                            android:id="@+id/btn_stop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_toLeftOf="@id/play_pause"
+                            android:src="@drawable/baseline_stop_24" />
+
+                </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_below="@id/tiempoTotal">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_shuffle_24"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/btn_Aleatorio"
+                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_navigate_first_24"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/btn_Aleatorio"
+                    android:id="@+id/primary_song"
+                    android:layout_marginLeft="30dp"
+                    />
+
+                />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_repeat_24"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/repetir"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_navigate_lastsong_24"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/final_song"
+                    android:layout_toRightOf="@+id/primary_song"
+                    android:layout_marginRight="30dp"
+                    />
+
+                </RelativeLayout>
+
+
+        </RelativeLayout>
+
+</RelativeLayout>
+

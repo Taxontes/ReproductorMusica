@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyBottomNavigation">
+        <item name="android:background">@color/color3</item>
+        <item name="itemBackground">@color/color3</item>
+        <item name="itemIconTint">@color/color3</item>
+        <item name="itemTextColor">@color/color3</item>
+
+
+
+    </style>
+    <style name="roundeImage">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+
+    </style>
+
+</resources>

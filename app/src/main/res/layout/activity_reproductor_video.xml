@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_pantalla_degradado"
+    android:orientation="vertical"
+    tools:context=".Vistas.ReproductorVideo">
+    <TextView
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+
+        app:tabIndicatorFullWidth="true"
+        app:tabIndicatorGravity="center"
+        app:tabTextColor="#FFFFFF"
+        android:padding="10dp"
+        android:text="Reproductor Video"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        tools:ignore="MissingConstraints"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_salir"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/baseline_reply_24"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/color3"
+        app:fabSize="mini"
+        android:paddingBottom="5dp"/>
+
+
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+       android:layout_below="@id/tab_layout"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
+
+
+</RelativeLayout>
